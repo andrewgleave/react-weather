@@ -12,7 +12,7 @@ import (
 
 const (
 	googleGeocodeURL = "http://maps.google.com/maps/api/geocode/json"
-	forecastURL      = "https://api.forecast.io/forecast/xxx/"
+	forecastURL      = "https://api.forecast.io/forecast/your-api-key-here/"
 	rootAssetPath    = "react-weather"
 )
 

@@ -71,7 +71,7 @@ textarea:focus, input:focus{
     padding:0.5rem 2rem;
 }
 .ww-csum {
-    font-weight:100;
+    font-weight:300;
     padding-bottom:1.5rem;
 }
 .ww-sf {
@@ -118,15 +118,13 @@ textarea:focus, input:focus{
 .ww-htb td {
     font-size:0.8125rem;
     text-align:left;
-    font-weight:100;
+    font-weight:300;
     padding:-0.5rem 0;
     border-bottom:1px solid #79B7E1;
 }
-
 .ww-htb tr:last-child td {
     border-bottom:none;
 }
-
 .ww-htb td.icon canvas {
     padding-top:0.4rem;
     display:block;

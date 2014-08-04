@@ -7,7 +7,12 @@ Build as part of an Intro to React [Code Club](http://codeclub.im/2014/07/introd
 Includes `server.go`, a simple Go-based JSON API to handle geocoding and interfacing with Forecast's API.
 
 ###Getting started
+
 To get up and running, you'll need to set `rootAssetPath` to the absolute path of your cloned repo, and replace the placeholder string in `forecastURL` with your own key.
+
+###Usage
+
+Click the location text to show the location search input. Click anywhere on app itself to show an hourly breakdown of the weather for the next 24 hours.
 
 ### Contributors
 

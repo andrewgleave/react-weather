@@ -40,7 +40,7 @@ func main() {
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/weather/", weatherHandler)
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir(path.Join(rootAssetPath, "www/static")))))
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":3000", nil))
 }
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {

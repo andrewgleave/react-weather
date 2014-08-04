@@ -49,6 +49,7 @@ textarea:focus, input:focus{
     box-shadow: 0 8px 6px -2px rgba(30, 42, 54, 0.8);
     height:24rem;
     overflow:hidden;
+    cursor:pointer;
 }
 .ww.loading {
     height:14rem;

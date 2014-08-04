@@ -69,6 +69,11 @@ var LocationSearchBar = React.createClass({
     handleClick: function(e) {
         e.stopPropagation();
     },
+    componentDidUpdate: function() {
+        if(this.props.visible) {
+            this.refs.search.getDOMNode().focus();
+        }
+    },
     render: function() {
         var classes = cx({
             'ww-sf centered-flex': true,

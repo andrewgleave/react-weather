@@ -124,7 +124,8 @@ var LocationHeader = React.createClass({
 var HourlyOutlookRow = React.createClass({
     mixins: [React.addons.PureRenderMixin],
     propTypes: {
-        color: React.PropTypes.string, 
+        shouldAnimate: React.PropTypes.bool,
+        color: React.PropTypes.string,
         temperature: React.PropTypes.number,
         icon: React.PropTypes.string,
         summary: React.PropTypes.string
@@ -133,13 +134,13 @@ var HourlyOutlookRow = React.createClass({
         var node = this.refs.icon.getDOMNode();
         this.skycons = new Skycons({ 'color': this.props.color });
         this.skycons.add(node, this.props.icon);
-        this.skycons.play();
     },
     componentWillReceiveProps: function(nextProps) {
         if(nextProps.icon !== this.props.icon) {
             var node = this.refs.icon.getDOMNode();
             this.skycons.set(node, nextProps.icon);
         }
+        nextProps.shouldAnimate ? this.skycons.play() : this.skycons.pause();
     },
     componentWillUnmount: function() {
         this.skycons.remove(this.refs.icon.getDOMNode());
@@ -168,6 +169,7 @@ var HourlyOutlookTable = React.createClass({
             return (
                 <HourlyOutlookRow
                     key={ 'hor' + item.time }
+                    shouldAnimate={ this.props.visible }
                     color={ this.props.iconColor }
                     time={ item.time }
                     temperature={ item.apparentTemperature }
